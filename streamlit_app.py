@@ -63,7 +63,11 @@ def pipeline(texto_procesado):
     svd = tsvd.transform(vector.astype('float32'))
     return svd
 
-texto_svd = pipeline(texto_procesado)
-y_pred = mejor_modelo.predict(texto_svd)
-st.write("La clasificacion ODS es: ", y_pred)
+if st.button("Predict"):
+    texto_svd = pipeline(texto_procesado)
+    y_pred = mejor_modelo.predict(texto_svd)
+    st.write("### Clasificacion ODS:")
+    st.write(y_pred)
+#y_pred = mejor_modelo.predict(texto_svd)
+#st.write("La clasificacion ODS es: ", y_pred)
 
