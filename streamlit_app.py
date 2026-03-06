@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import pickle
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.decomposition import TruncatedSVD
@@ -42,7 +43,7 @@ def convert_token(textos):
 texto_procesado = convert_token(mensaje)
 
 st.write("Texto procesado ", texto_procesado)
-
+"""
 try:
     vectorizer = joblib.load('E:/Imagenes/vectorizer.pkl') 
     st.write("Vectorizer", vectorizer)
@@ -58,3 +59,9 @@ try:
     best_model = joblib.load('E:/Imagenes/best_model.pkl') #
 except FileNotFoundError:
     st.error("Model file 'best_model.pkl' not found. Please ensure it is in the correct directory.")
+"""
+vectorizer = pickle.load(open("E:/Imagenes/vectorizer.pkl", "rb"))
+tsvd = pickle.load(open("E:/Imagenes/tsvd.pkl", "rb"))
+best_model = pickle.load(open("E:/Imagenes/best_model.pkl", "rb"))
+
+st.write("Vectorizer", vectorizer)
