@@ -43,6 +43,10 @@ def convert_token(textos):
 texto_procesado = convert_token(mensaje)
 
 st.write("Texto procesado ", texto_procesado)
+
+import sys
+
+st.write(f"Python Version: {sys.version}")
 """
 try:
     vectorizer = joblib.load('E:/Imagenes/vectorizer.pkl') 
