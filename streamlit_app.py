@@ -77,6 +77,5 @@ def pipeline(texto_procesado):
 if st.button("Predecir Clasificacion", key="orange"):
     texto_svd = pipeline(texto_procesado)
     y_pred = mejor_modelo.predict(texto_svd)
-    st.write("### Clasificacion ODS:")
-    st.write(y_pred)
+    st.write("### Clasificacion ODS: ", y_pred)
 
