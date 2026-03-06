@@ -57,6 +57,11 @@ except Exception as e:
     st.error(f"Error loading model: {e}")
 
 try:
+    ClfSwitcher = joblib.load('ClfSwitcher.joblib')
+except Exception as e:
+    st.error(f"Error loading model: {e}")
+
+try:
     best_model = joblib.load('best_model.joblib')
 except Exception as e:
     st.error(f"Error loading model: {e}")
