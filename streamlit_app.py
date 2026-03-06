@@ -12,6 +12,16 @@ from nltk.stem import PorterStemmer
 import nltk
 nltk.download('stopwords')
 
+st.markdown("""
+<style>
+.big-font {
+    font-size: 50px !important;
+    font-weight: bold;
+}
+</style>
+""", unsafe_allow_html=True)
+st.markdown('<p class="big-font">Big Font</p>', unsafe_allow_html=True)
+
 st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
 
 st.info('En esta aplicacion se puede ingresar un texto y se otorgara una clasificacion ODS.')
