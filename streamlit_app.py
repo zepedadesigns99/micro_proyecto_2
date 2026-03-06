@@ -11,4 +11,5 @@ user_message = st.text_area("Ingresa el texto a clasificar")
 st.write(f"Tu texto es: {user_message}")
 
 st.write("El tipo de mensaje es ", type(user_message))
-
+mensaje = pd.Series(user_message, dtype="str")
+st.write("El tipo de mensaje convertido es ", type(mensaje))
