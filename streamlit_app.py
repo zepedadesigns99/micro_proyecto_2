@@ -29,10 +29,8 @@ st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
 
 st.info('En esta aplicacion se puede ingresar un texto y se otorgara una clasificacion ODS.')
 
-#with st.form('user_input'):
-user_message = st.text_area("### Ingresa el texto a clasificar", key="styledtextarea")
+user_message = st.text_area("Ingresa el texto a clasificar", key="styledtextarea")
 st.write("Selecciona el boton Predecir Clasificacion para visualizar el ODS")
-#button = st.form_submit_button()
 
 mensaje = pd.Series(user_message, dtype="str")
 
