@@ -44,7 +44,8 @@ texto_procesado = convert_token(mensaje)
 st.write("Texto procesado ", texto_procesado)
 
 try:
-    vectorizer = joblib.load('E:/Imagenes/vectorizer.pkl') #
+    vectorizer = joblib.load('E:/Imagenes/vectorizer.pkl') 
+    st.write("Vectorizer", vectorizer)
 except FileNotFoundError:
     st.error("Model file 'vectorizer.pkl' not found. Please ensure it is in the correct directory.")
 
