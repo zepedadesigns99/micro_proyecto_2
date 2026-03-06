@@ -25,7 +25,7 @@ css_path = pathlib.Path("assets/styles.css")
 load_css(css_path)
 
 
-st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
+st.title('🤖 Micro proyecto 2: Clasificacion ODS MP-68')
 st.subheader( "Objetivo de la aplicacion:")
 st.subheader("Desarrollar una solución, basada en técnicas de procesamiento de lenguaje natural y machine learning, que facilite la interpretación y análisis de información textual para la identificación de relaciones semánticas con los Objetivos de Desarrollo Sostenibles.")
 
