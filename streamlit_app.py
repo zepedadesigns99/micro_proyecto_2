@@ -4,7 +4,6 @@ import numpy as np
 import joblib
 import pickle
 from sklearn.svm import SVC
-from sklearn.linear_model import LogisticRegression
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import RegexpTokenizer
@@ -53,6 +52,11 @@ except Exception as e:
 
 try:
     tsvd = joblib.load('tsvd.joblib')
+except Exception as e:
+    st.error(f"Error loading model: {e}")
+
+try:
+    mejor_modelo = joblib.load('mejor_modelo.joblib')
 except Exception as e:
     st.error(f"Error loading model: {e}")
 """
