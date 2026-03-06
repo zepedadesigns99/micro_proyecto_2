@@ -20,6 +20,7 @@ st.info('En esta aplicacion se puede ingresar un texto y se otorgara una clasifi
 with st.form('user_input'):
     user_message = st.text_area("Ingresa el texto a clasificar")
     st.write(f"Tu texto es: {user_message}")
+    st.write("Seleccionar el button Submit para empezar la clasificacion del texto ingresado")
     button = st.form_submit_button()
 
 mensaje = pd.Series(user_message, dtype="str")
