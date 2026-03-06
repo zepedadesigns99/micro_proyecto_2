@@ -7,6 +7,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import RegexpTokenizer
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+import nltk
+nltk.download('stopwords')
 
 st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
 
