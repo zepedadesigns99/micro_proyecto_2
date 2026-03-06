@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import joblib
 from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
 from nltk import RegexpTokenizer
@@ -43,16 +44,16 @@ texto_procesado = convert_token(mensaje)
 st.write("Texto procesado ", texto_procesado)
 
 try:
-    vectorizer = joblib.load('vectorizer.joblib') #
+    vectorizer = joblib.load('E:/Imagenes/vectorizer.joblib') #
 except FileNotFoundError:
     st.error("Model file 'vectorizer.joblib' not found. Please ensure it is in the correct directory.")
 
 try:
-    tsvd = joblib.load('tsvd.joblib') #
+    tsvd = joblib.load('E:/Imagenes/tsvd.joblib') #
 except FileNotFoundError:
     st.error("Model file 'tsvd.joblib' not found. Please ensure it is in the correct directory.")
 
 try:
-    best_model = joblib.load('best_model.joblib') #
+    best_model = joblib.load('E:/Imagenes/best_model.joblib') #
 except FileNotFoundError:
     st.error("Model file 'best_model.joblib' not found. Please ensure it is in the correct directory.")
