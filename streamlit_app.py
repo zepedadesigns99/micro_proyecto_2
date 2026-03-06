@@ -1,4 +1,6 @@
 import streamlit as st
+import pandas as pd
+import nummpy as np
 from sklearn.svm import SVC
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
