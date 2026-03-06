@@ -79,7 +79,10 @@ if st.button("Predecir Clasificacion", key="orange"):
     #if texto_procesado
     texto_svd = pipeline(texto_procesado)
     contador = np.sum(texto_svd)
-    st.write(contador)
-    y_pred = mejor_modelo.predict(texto_svd)
-    st.write("### Clasificacion ODS: ", y_pred)
+    if contador == 0:
+        st.write("Revisar el texto ingresado")
+    else:
+        y_pred = mejor_modelo.predict(texto_svd)
+        st.write("### Clasificacion ODS: ", y_pred)
+    
 
