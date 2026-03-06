@@ -22,6 +22,8 @@ st.write(f"Tu texto es: {user_message}")
 
 mensaje = pd.Series(user_message, dtype="str")
 
+st.write(pickle.__doc__)
+
 #Funcion que se encarga del preprocesamiento de los textos
 def convert_token(textos):
     #Crea la instancia Tokenizer que encuentra la secuencia de caracteres alfanumericos
@@ -59,9 +61,9 @@ try:
     best_model = joblib.load('E:/Imagenes/best_model.pkl') #
 except FileNotFoundError:
     st.error("Model file 'best_model.pkl' not found. Please ensure it is in the correct directory.")
-"""
+
 vectorizer = pickle.load(open("E:/Imagenes/vectorizer.pkl", "rb"))
 tsvd = pickle.load(open("E:/Imagenes/tsvd.pkl", "rb"))
 best_model = pickle.load(open("E:/Imagenes/best_model.pkl", "rb"))
-
+"""
 st.write("Vectorizer", vectorizer)
