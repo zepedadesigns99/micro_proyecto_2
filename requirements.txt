@@ -4,4 +4,4 @@ pandas
 scikit-learn
 nltk
 joblib
-pipeline
+Pipeline
