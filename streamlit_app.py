@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import pickle
+#import pickle
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
 from sklearn.decomposition import TruncatedSVD
@@ -21,8 +21,6 @@ user_message = st.text_area("Ingresa el texto a clasificar")
 st.write(f"Tu texto es: {user_message}")
 
 mensaje = pd.Series(user_message, dtype="str")
-
-st.write(pickle.__doc__)
 
 #Funcion que se encarga del preprocesamiento de los textos
 def convert_token(textos):
