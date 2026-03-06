@@ -45,9 +45,9 @@ def convert_token(textos):
 texto_procesado = convert_token(mensaje)
 
 st.write("Texto procesado ", texto_procesado)
-
+#vectorizer = joblib.load('vectorizer.joblib')
 try:
-    vectorizer = joblib.load('E:/Imagenes/vectorizer.joblib')
+    vectorizer = joblib.load('vectorizer.joblib')
 except Exception as e:
     st.error(f"Error loading model: {e}")
     
