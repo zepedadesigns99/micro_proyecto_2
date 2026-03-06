@@ -1,3 +1,8 @@
+import os
+
+# Run the pip upgrade command during deployment
+os.system("pip install --upgrade pip")
+
 import streamlit as st
 import pandas as pd
 import numpy as np
