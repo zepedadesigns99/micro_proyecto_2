@@ -44,6 +44,11 @@ texto_procesado = convert_token(mensaje)
 
 st.write("Texto procesado ", texto_procesado)
 
+try:
+    vectorizer = joblib.load('E:/Imagenes/vectorizer.joblib')
+except Exception as e:
+    st.error(f"Error loading model: {e}")
+    
 """
 try:
     vectorizer = joblib.load('E:/Imagenes/vectorizer.pkl') 
@@ -61,8 +66,8 @@ try:
 except FileNotFoundError:
     st.error("Model file 'best_model.pkl' not found. Please ensure it is in the correct directory.")
 """
-vectorizer = pickle.load(open("E:/Imagenes/vectorizer.pkl", "rb"))
-tsvd = pickle.load(open("E:/Imagenes/tsvd.pkl", "rb"))
-best_model = pickle.load(open("E:/Imagenes/best_model.pkl", "rb"))
+#vectorizer = pickle.load(open("E:/Imagenes/vectorizer.pkl", "rb"))
+#tsvd = pickle.load(open("E:/Imagenes/tsvd.pkl", "rb"))
+#best_model = pickle.load(open("E:/Imagenes/best_model.pkl", "rb"))
 
 #st.write("Vectorizer", vectorizer)
