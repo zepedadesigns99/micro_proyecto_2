@@ -44,16 +44,16 @@ texto_procesado = convert_token(mensaje)
 st.write("Texto procesado ", texto_procesado)
 
 try:
-    vectorizer = joblib.load('E:/Imagenes/vectorizer.joblib') #
+    vectorizer = joblib.load('E:/Imagenes/vectorizer.pkl') #
 except FileNotFoundError:
-    st.error("Model file 'vectorizer.joblib' not found. Please ensure it is in the correct directory.")
+    st.error("Model file 'vectorizer.pkl' not found. Please ensure it is in the correct directory.")
 
 try:
-    tsvd = joblib.load('E:/Imagenes/tsvd.joblib') #
+    tsvd = joblib.load('E:/Imagenes/tsvd.pkl') #
 except FileNotFoundError:
-    st.error("Model file 'tsvd.joblib' not found. Please ensure it is in the correct directory.")
+    st.error("Model file 'tsvd.pkl' not found. Please ensure it is in the correct directory.")
 
 try:
-    best_model = joblib.load('E:/Imagenes/best_model.joblib') #
+    best_model = joblib.load('E:/Imagenes/best_model.pkl') #
 except FileNotFoundError:
-    st.error("Model file 'best_model.joblib' not found. Please ensure it is in the correct directory.")
+    st.error("Model file 'best_model.pkl' not found. Please ensure it is in the correct directory.")
