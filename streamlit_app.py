@@ -66,4 +66,4 @@ vectorizer = pickle.load(open("E:/Imagenes/vectorizer.pkl", "rb"))
 tsvd = pickle.load(open("E:/Imagenes/tsvd.pkl", "rb"))
 best_model = pickle.load(open("E:/Imagenes/best_model.pkl", "rb"))
 """
-st.write("Vectorizer", vectorizer)
+#st.write("Vectorizer", vectorizer)
