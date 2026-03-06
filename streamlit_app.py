@@ -30,7 +30,7 @@ st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
 st.info('En esta aplicacion se puede ingresar un texto y se otorgara una clasificacion ODS.')
 
 #with st.form('user_input'):
-user_message = st.text_area("Ingresa el texto a clasificar")
+user_message = st.text_area("Ingresa el texto a clasificar", key="styledinput")
 st.write("Seleccionar el button Submit para empezar la clasificacion del texto ingresado")
 #button = st.form_submit_button()
 
@@ -76,7 +76,7 @@ def pipeline(texto_procesado):
     svd = tsvd.transform(vector.astype('float32'))
     return svd
 
-if st.button("Predecir Clasificacion", key="green"):
+if st.button("Predecir Clasificacion", key="orange"):
     texto_svd = pipeline(texto_procesado)
     y_pred = mejor_modelo.predict(texto_svd)
     st.write("### Clasificacion ODS:")
