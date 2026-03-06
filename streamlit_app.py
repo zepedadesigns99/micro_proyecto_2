@@ -12,15 +12,18 @@ from nltk.stem import PorterStemmer
 import nltk
 nltk.download('stopwords')
 
-st.markdown("""
-<style>
-.big-font {
-    font-size: 50px !important;
-    font-weight: bold;
-}
-</style>
-""", unsafe_allow_html=True)
-st.markdown('<p class="big-font">Big Font</p>', unsafe_allow_html=True)
+import pathlib
+
+
+# Function to load CSS from the 'assets' folder
+def load_css(file_path):
+    with open(file_path) as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Load the external CSS
+css_path = pathlib.Path("assets/styles.css")
+load_css(css_path)
+
 
 st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
 
