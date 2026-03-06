@@ -13,6 +13,21 @@ from nltk.stem import PorterStemmer
 import nltk
 nltk.download('stopwords')
 
+#Carga de datos del archivo
+data_raw = pd.read_excel('E:/Train_textos.xlsx')
+#Se crea una duplicado del dataframe original
+data = data_raw.copy()
+
+x = data.drop('ODS', axis=1)
+y = data['ODS']
+
+#Separacion en set de entrenamiento y prueba, se usa stratify=variable objetivo para que se separen los datos en proporciones iguales en train y test 
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42, stratify=y)
+
+#Convierte el DataFrame (n, 1) a Series para que funcione la funcion de reducion de la dimensionalidad TruncatedSVD
+x_train = x_train.stack()
+x_test = x_test.stack()
+
 st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
 
 st.info('En esta aplicacion se puede ingresar un texto y se otorgara una clasificacion ODS.')
