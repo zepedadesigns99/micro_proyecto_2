@@ -1,13 +1,11 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# 🤖 Micro proyecto 2 Clasificacion ODS 
 
-Description of the app ...
+Objetivo
+Ingresar un texto y mostrar la clasificacion ODS de acuerdo al codigo desarrollado del Micro Proyecto 2
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://micro_proyecto_2.streamlit.app/)
 
 ## GitHub Codespaces
 
