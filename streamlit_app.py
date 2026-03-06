@@ -10,5 +10,5 @@ st.info('En esta aplicacion se puede ingresar un texto y se otorgara una clasifi
 user_message = st.text_area("Ingresa el texto a clasificar")
 st.write(f"Tu texto es: {user_message}")
 
-print(type(user_message))
+st.write("El tipo de mensaje es ", type(user_message))
 
