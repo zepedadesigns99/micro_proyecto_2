@@ -59,15 +59,13 @@ try:
     mejor_modelo = joblib.load('mejor_modelo.joblib')
 except Exception as e:
     st.error(f"Error loading model: {e}")
-"""
-try:
-    ClfSwitcher = joblib.load('ClfSwitcher.joblib')
-except Exception as e:
-    st.error(f"Error loading model: {e}")
 
-try:
-    best_model = joblib.load('best_model.joblib')
-except Exception as e:
-    st.error(f"Error loading model: {e}")
-"""    
+def pipeline(texto_procesado):
+    vector = vectorizer.transform(texto_procesado)
+    svd = tsvd.transform(vector.astype('float32'))
+    return svd
+
+texto_svd = pipeline(texto_procesado)
+y_pred = mejor_modelo.predict(texto_svd)
+st.write("La clasificacion ODS es: ", y_pred)
 
