@@ -12,7 +12,7 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import nltk
 nltk.download('stopwords')
-
+pip install --upgrade pip
 st.title('🤖 Micro proyecto 2 Clasificacion ODS MP-68')
 
 st.info('En esta aplicacion se puede ingresar un texto y se otorgara una clasificacion ODS.')
