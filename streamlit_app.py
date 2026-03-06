@@ -43,8 +43,6 @@ def convert_token(textos):
 
 texto_procesado = convert_token(mensaje)
 
-st.write("Texto procesado ", texto_procesado)
-
 try:
     vectorizer = joblib.load('vectorizer.joblib')
 except Exception as e:
