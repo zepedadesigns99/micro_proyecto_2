@@ -38,10 +38,16 @@ mensaje = pd.Series(user_message, dtype="str")
 
 #Funcion que se encarga del preprocesamiento de los textos
 def convert_token(textos):
+    """
+        textos: pd.Series
+        Contiene los datos raw de los diferentes textos a preprocesar
+    """
+    #Se pasa a minusculas todas las palabras de los textos
+    textos_lower = textos.str.lower()
     #Crea la instancia Tokenizer que encuentra la secuencia de caracteres alfanumericos
     tokenizer = RegexpTokenizer(r'\w+')
     #Aplica el tokenizer a cada elembneto en textos, donde cada elemento es una lista de palabras sin puntuacion
-    tokenized_no_punct = textos.apply(lambda x: tokenizer.tokenize(x))
+    tokenized_no_punct = textos_lower.apply(lambda x: tokenizer.tokenize(x))
     #Carga la lista predefinida de palabras vacias en espanol
     nltk_stopwords = stopwords.words("spanish")
     #Itera en la lista de palabras tokenized_no_punct y filtra las palabras presentes en nltk_stopwords
@@ -52,6 +58,7 @@ def convert_token(textos):
     stemmed = no_stopwords.apply(lambda x: [stemmer.stem(token) for token in x])
     #Une las palabras procesadas en cada lista de stemmed en una sola cadena de texto, separada por un espacio
     processed = stemmed.apply(lambda x: ' '.join(x))
+    
     return processed
 
 texto_procesado = convert_token(mensaje)
